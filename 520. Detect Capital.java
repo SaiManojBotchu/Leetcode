@@ -10,7 +10,7 @@ class Solution {
         }
         if (count1 == word.length()) return true;
         else if (count2 == word.length()) return true;
-        else if (count2 == word.length() - 1 && word.charAt(0) <= 90) return true;
+        else if (count2 == word.length() - 1 && word.charAt(0) <= 'Z') return true;
         else return false;
     }
 }

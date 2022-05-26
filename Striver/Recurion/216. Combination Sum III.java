@@ -6,14 +6,17 @@ class Solution {
         return res;
     }
     
-    public void backtrack(int start, int k, int n, List<Integer> li) {
-        if (li.size() == k && n == 0) {
+    public void backtrack(int start, int k, int sum, List<Integer> li) {
+        if (k == 0 && sum == 0) {
             res.add(new ArrayList<>(li));
             return;
         }
         for (int i = start; i <= 9; i++) {
+            // do not examine later elements since they are larger
+            if (i > sum) break;
+
             li.add(i);
-            backtrack(i + 1, k, n - i, li);
+            backtrack(i + 1, k - 1, sum - i, li);
             li.remove(li.size() - 1);
         }
     }

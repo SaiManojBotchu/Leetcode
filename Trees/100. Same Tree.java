@@ -7,3 +7,5 @@ class Solution {
         return p.val == q.val && left && right;
     }
 }
+
+// https://leetcode.com/problems/same-tree/discuss/2135837/java-solution-using-recursion/1431157

@@ -11,6 +11,7 @@ class Solution {
                 open--;
             }
         }
+        // 1 swap cancels 2 close brackets
         return (swap + 1) / 2;
     }
 }

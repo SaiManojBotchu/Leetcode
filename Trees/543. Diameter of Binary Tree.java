@@ -9,7 +9,9 @@ class Solution {
         
         int lh = recursion(root.left);
         int rh = recursion(root.right);
-        // finding max diameter for every node
+        // finding diameter for every node and store the max diameter in "max"
+        // we are only adding lh + rh because the length of a path is no. of edges between them not no. of nodes. 
+        // so the cur node will act as a curving point.
         max = Math.max(max, lh + rh);
         return 1 + Math.max(lh, rh);
     }

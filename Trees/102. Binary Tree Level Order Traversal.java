@@ -10,13 +10,14 @@ class Solution {
             int size = q.size();
             List<Integer> li = new ArrayList<>();
             for (int i = 0; i < size; i++) {
-                if (q.peek().left != null) {
-                    q.add(q.peek().left);
+                TreeNode cur = q.poll();
+                if (cur.left != null) {
+                    q.add(cur.left);
                 }
-                if (q.peek().right != null) {
-                    q.add(q.peek().right);
+                if (cur.right != null) {
+                    q.add(cur.right);
                 }
-                li.add(q.poll().val);
+                li.add(cur.val);
             }
             res.add(li);
         }

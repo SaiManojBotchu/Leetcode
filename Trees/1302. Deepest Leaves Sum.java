@@ -14,8 +14,8 @@ class Solution {
         if (curDepth == maxDepth) {
             sum += node.val;
         }
-        helper(node.left, curDepth + 1);
-        helper(node.right, curDepth + 1);
+        if (node.left != null) helper(node.left, curDepth + 1);
+        if (node.right != null) helper(node.right, curDepth + 1);
     }
 }
 
